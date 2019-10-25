@@ -29,8 +29,16 @@
     }
   
     .content {
-      float: right;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
       width: 79.7872%;
+    }
+
+    .content img {
+      height: 200px;
+      padding: 20px;
     }
   
     .wrapper {
@@ -63,4 +71,11 @@
       margin: 0;
     }
   }
+
+  ul {
+    list-style-type: none;
+  }
   
+  h5 {
+    text-align: center;
+  }
