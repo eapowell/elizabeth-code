@@ -44,7 +44,7 @@ navbar a {
 }
 
 navbar a:hover {
-color: #fded11;
+    color: #fded11;
 }
 
 navbar {
@@ -63,7 +63,7 @@ navbar li {
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 4rem;
     width: 100%;
     max-width: 1680px;
@@ -76,6 +76,7 @@ main {
 header {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 button {
@@ -83,4 +84,21 @@ button {
     font-size: 1.5rem;
     border-radius: 10% / 50%;
     visibility: visible;
+    margin: 20px;
+}
+
+img {
+    width: 250px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+h2 p {
+    margin: 0;
 }

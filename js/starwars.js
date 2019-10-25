@@ -1,7 +1,5 @@
-import { films } from '../assets/films.js'
+
 import { people } from '../assets/people.js'
-
-
 
 console.log ('Hey, I am JavaScript on your page')
 
@@ -27,8 +25,8 @@ let mainHeader = document.querySelector ('header')
 
   people.forEach(function(person) {
     let personDiv = document.createElement('div')
-    let name = document.createElement('h1')
-    let gender = document.createElement('h3')
+    let name = document.createElement('h2')
+    let gender = document.createElement('h4')
     let pic = document.createElement('img')
 
     personDiv.appendChild(name)
@@ -66,38 +64,44 @@ function getCharNumber(charURL) {
   let maleButton = document.createElement('button')
   maleButton.textContent = "Male Characters"
   maleButton.addEventListener('click', () => {
-     maleCharacters.forEach(elt => {
+     femaleCharacters.forEach(elt => {
       let matchedDiv = allDivs.filter(element => {
         return element.firstChild.textContent === elt.name
-      })
-      console.log(matchedDiv)
-     matchedDiv[0].setAttribute("style", "display:none") 
+      }) 
+     matchedDiv[0].setAttribute("style", "display: none") 
      })
-     femaleCharacters.forEach(elt => {
-      // elt.setAttribute("style", "visibility:hidden")
      })
-  
-  
-  })
+
   let femaleButton = document.createElement('button')
   femaleButton.textContent = "Female Characters"
   femaleButton.addEventListener('click', () => {
-    femaleCharacters.forEach(elt => {
+    maleCharacters.forEach(elt => {
       let matchedDiv = allDivs.filter(element => {
         return element.firstChild.textContent === elt.name
       })
-      console.log(matchedDiv)
-     matchedDiv[0].setAttribute("style", "display:none") 
-     })
-     maleCharacters.forEach(elt => {
-      // elt.setAttribute("style", "visibility:hidden")
+     matchedDiv[0].setAttribute("style", "display: none")
+
+
      })
   })
 
-    
-  mainHeader.appendChild(femaleButton)
-  mainHeader.appendChild(maleButton)
+  let allButton = document.createElement('button')
+  allButton.textContent = "All Characters"
+  allButton.addEventListener('click', () => {
+    femaleCharacters.forEach(elt =>{
+      let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+      })
+      matchedDiv[0].setAttribute("style", "display: revert")
+      
+    })
+ })
 
+    
+  mainHeader.appendChild(maleButton)
+  mainHeader.appendChild(allButton)
+  mainHeader.appendChild(femaleButton)
+  
 
 
 
