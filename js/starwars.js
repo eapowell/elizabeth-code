@@ -68,7 +68,12 @@ function getCharNumber(charURL) {
       let matchedDiv = allDivs.filter(element => {
         return element.firstChild.textContent === elt.name
       }) 
-     matchedDiv[0].setAttribute("style", "display: none") 
+     if(matchedDiv.getAttribute("style") === "display: none;") {
+       matchedDiv.setAttribute("style", "display: revert;")
+     } else {
+       matchedDiv.setAttribute("style", "display: none;")
+     }
+  
      })
      })
 
