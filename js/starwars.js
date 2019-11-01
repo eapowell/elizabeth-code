@@ -3,23 +3,6 @@ import { people } from '../assets/people.js'
 
 console.log ('Hey, I am JavaScript on your page')
 
-/*
-films.forEach(function(film) {
-
-    let filmDiv = document.createElement('div')
-    let title = document.createElement('h1')
-    let crawl = document.createElement('p')
-
-    filmDiv.appendChild(title)
-    filmDiv.appendChild(crawl)
-
-    title.textContent = film.title
-    crawl.innerText = film.opening_crawl
-
-    mainArea.appendChild(filmDiv)
-  })
-*/
-
 let mainArea = document.querySelector('main')
 let mainHeader = document.querySelector ('header')
 
@@ -106,6 +89,7 @@ function getCharNumber(charURL) {
   mainHeader.appendChild(maleButton)
   mainHeader.appendChild(allButton)
   mainHeader.appendChild(femaleButton)
+  mainHeader.appendChild(otherButton)
   
 
 

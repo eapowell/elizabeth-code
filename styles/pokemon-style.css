@@ -1,0 +1,15 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    
+}
+
+img {
+    max-width: 100px;
+    
+}
