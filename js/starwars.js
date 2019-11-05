@@ -6,6 +6,7 @@ console.log ('Hey, I am JavaScript on your page')
 let mainArea = document.querySelector('main')
 let mainHeader = document.querySelector ('header')
 
+function showCharArray(){
   people.forEach(function(person) {
     let personDiv = document.createElement('div')
     let name = document.createElement('h2')
@@ -24,7 +25,7 @@ let mainHeader = document.querySelector ('header')
 
     mainArea.appendChild(personDiv)
 })
-
+}
 
 function getCharNumber(charURL) {
   let end = charURL.lastIndexOf('/')
@@ -40,6 +41,7 @@ function getCharNumber(charURL) {
   console.log(maleCharacters)
   const femaleCharacters = people.filter(person => person.gender === "female")
   console.log(femaleCharacters)
+  
   const allDivs = Array.from(mainArea.querySelectorAll('div'))
 
  
@@ -47,11 +49,12 @@ function getCharNumber(charURL) {
   let maleButton = document.createElement('button')
   maleButton.textContent = "Male Characters"
   maleButton.addEventListener('click', () => {
-     femaleCharacters.forEach(elt => {
+     maleCharacters.forEach(elt => {
       let matchedDiv = allDivs.filter(element => {
         return element.firstChild.textContent === elt.name
       }) 
      if(matchedDiv.getAttribute("style") === "display: none;") {
+
        matchedDiv.setAttribute("style", "display: revert;")
      } else {
        matchedDiv.setAttribute("style", "display: none;")

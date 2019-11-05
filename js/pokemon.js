@@ -53,3 +53,11 @@ function getPokeNumber(id) {
         return '0${id}'
     } else return id
  }
+
+
+ 
+// CARD FLIP
+// var card = document.querySelector('.card');
+//card.addEventListener( 'click', function() {
+ // card.classList.toggle('is-flipped');
+//});
