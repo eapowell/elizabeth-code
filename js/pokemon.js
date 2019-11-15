@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 async function getAPIData(url) {
     try {
         const response = await fetch(url)
@@ -13,7 +20,7 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/')
     for (const pokemon of data.results) {
         getAPIData(pokemon.url)
         .then(pokedata => {
-            populateDOM(pokedata)
+           // populateDOM(pokedata)
         })      
     }
 })
@@ -61,3 +68,8 @@ function getPokeNumber(id) {
 //card.addEventListener( 'click', function() {
  // card.classList.toggle('is-flipped');
 //});
+
+
+function fillCardFront(pokeFront, data) {
+    pokeFront.setAttribute
+}
