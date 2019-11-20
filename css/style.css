@@ -76,9 +76,18 @@ p {
     height: 100vh;
     background-color:  #002033;
 }
+.personal-pic {
+    max-width: 250px;
+    border-radius: 50%;
+}
+
 .welcome-section > p {
     color: #5e8930;
 }
+.welcome-section h1 {
+    padding-top: 20px;
+}
+
 .projects-section {
     text-align: center;
     padding: 6rem 4rem;
