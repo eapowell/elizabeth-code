@@ -141,3 +141,14 @@ img {
   background: blue;
   transform: rotateY(180deg);
 }
+
+
+button {
+  width: 150px;
+  height: 80px;
+  background-color: darkblue
+  color: whitesmoke;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin: 100px;
+}
