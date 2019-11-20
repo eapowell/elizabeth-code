@@ -164,11 +164,11 @@ footer {
       font-style: italic;
     }
 .underline-header {
-    margin: 0 auto 4rem auto;
+        margin: 0 auto 4rem auto;
         max-width: 700px;
-        border-bottom: 0.1rem solid #000;
+       /* border-bottom: 0.1rem solid #000;*/
     }
-    h3 {
+h3 {
         font-size: 2.5rem;
     }
 
