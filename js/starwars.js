@@ -1,33 +1,27 @@
-import { films } from "/assets/films.js";
-import { people } from "/assets/people.js";
-import { planets } from "/assets/planets.js";
-import { species } from "/assets/species.js";
-import { starships } from "/assets/starships.js";
-import { vehicles } from "/assets/vehicles.js";
-
-let mainArea = document.querySelector("main");
-let nav = document.querySelector("nav");
-let home = document.createElement("button");
-let filmBtn = document.createElement("button");
-let peopleBtn = document.createElement("button");
-let planetsBtn = document.createElement("button");
-let speciesBtn = document.createElement("button");
-let starshipsBtn = document.createElement("button");
-let vehiclesBtn = document.createElement("button");
-
-
-
-
-
-
-
+import { people } from '../assets/people.js'
 
 console.log ('Hey, I am JavaScript on your page')
 
-//let mainArea = document.querySelector('main')
+/*
+films.forEach(function(film) {
+
+    let filmDiv = document.createElement('div')
+    let title = document.createElement('h1')
+    let crawl = document.createElement('p')
+
+    filmDiv.appendChild(title)
+    filmDiv.appendChild(crawl)
+
+    title.textContent = film.title
+    crawl.innerText = film.opening_crawl
+
+    mainArea.appendChild(filmDiv)
+  })
+*/
+
+let mainArea = document.querySelector('main')
 let mainHeader = document.querySelector ('header')
 
-function showCharArray(){
   people.forEach(function(person) {
     let personDiv = document.createElement('div')
     let name = document.createElement('h2')
@@ -46,9 +40,8 @@ function showCharArray(){
 
     mainArea.appendChild(personDiv)
 })
-}
 
-// populate character pics
+
 function getCharNumber(charURL) {
   let end = charURL.lastIndexOf('/')
   let charID = charURL.substring(end -2, end)
@@ -59,57 +52,53 @@ function getCharNumber(charURL) {
   }
   }
 
-//create button toggle and revert
-  var males = people.filter(person => person.gender === "male")
-
   const maleCharacters = people.filter(person => person.gender === "male")
+  console.log(maleCharacters)
   const femaleCharacters = people.filter(person => person.gender === "female")
-  const otherCharacters = people.filter(person => person.gender != "male" && person.gender != "female")
-  
-  const allDivs = Array.from(document.querySelectorAll('div'))
+  console.log(femaleCharacters)
+  const allDivs = Array.from(mainArea.querySelectorAll('div'))
 
+ 
+  
   let maleButton = document.createElement('button')
-    maleButton.textContent = "Male Characters"
-    maleButton.addEventListener('click', () => {
-      femaleCharacters.forEach(elt => {
-        let matchedDiv = allDivs.filter(element => {
-          return element.firstChild.textContent === elt.name
-         }) 
-       if(matchedDiv.getAttribute("style") === "display: none;") {
-
-        matchedDiv.setAttribute("style", "display: revert;")
-       } else {
-         matchedDiv.setAttribute("style", "display: none;")
-         otherChar()
-       }
-  
+  maleButton.textContent = "Male Characters"
+  maleButton.addEventListener('click', () => {
+     femaleCharacters.forEach(elt => {
+      let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+      }) 
+     matchedDiv[0].setAttribute("style", "display: none") 
+     
      })
      })
 
   let femaleButton = document.createElement('button')
-    femaleButton.textContent = "Female Characters"
-    femaleButton.addEventListener('click', () => {
-      maleCharacters.forEach(elt => {
-        let matchedDiv = allDivs.filter(element => {
-          return element.firstChild.textContent === elt.name
-        })
-      matchedDiv[0].setAttribute("style", "display: none")
-      otherChar()
-   
-        })
-     })
-   
-     
-    let otherChar = (() => {
-      maleButton.textContent = "Other Characters"
-      otherCharacters.forEach(character => {
-        let matchedDiv = allDivs.find(oneDiv => {
-          return oneDiv.firstChild.textContent === character.name
-        })
-          matchedDiv.setAttribute("style", "display: none;")
-        })
+  femaleButton.textContent = "Female Characters"
+  femaleButton.addEventListener('click', () => {
+    maleCharacters.forEach(elt => {
+      let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
       })
+     matchedDiv[0].setAttribute("style", "display: none")
+     
+
+     })
+  })
+
+  let allButton = document.createElement('button')
+  allButton.textContent = "All Characters"
+  allButton.addEventListener('click', () => {
+    femaleCharacters.forEach(elt =>{
+      let matchedDiv = allDivs.filter(element => {
+        return element.firstChild.textContent === elt.name
+      })
+      matchedDiv[0].setAttribute("style", "display: revert")
+      
+    })
+ })
+
     
   mainHeader.appendChild(maleButton)
+  mainHeader.appendChild(allButton)
   mainHeader.appendChild(femaleButton)
-  mainHeader.appendChild(otherButton)
+  
