@@ -43,7 +43,6 @@ function populateDOM(single_pokemon) {
   let weight = document.createElement("p")
   let pokeId = document.createElement("p")
   let forms = document.createElement("p")
-  let hr = document.createElement("hr")
   let tipes = document.createElement("div")
 
   pokeScene.setAttribute("class", "scene")
