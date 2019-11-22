@@ -10,7 +10,7 @@ main {
 }
 
 img {
-    max-width: 100px;
+    max-width: 150px;
 
 }
 
@@ -35,6 +35,42 @@ img {
     display: grid;
     grid-gap: 10px;
   }
+
+  header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+  header img {
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+
+  .buttoncenter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 20px;
+  backface-visibility: hidden;
+  }
+
+  #search {
+    background: #ffcb05;
+    height: 260px;
+    width: 200px;
+    border-radius: 50px;
+    color: white;
+    border: 0;
+    margin: 0;
+    
+  }
+
   
   @media screen and (min-width: 500px) {
   
@@ -53,8 +89,9 @@ img {
     }
 
     .content img {
-      height: 200px;
+      height: 300px;
       padding: 20px;
+    
     }
   
     .wrapper {
@@ -96,6 +133,8 @@ img {
     text-align: center;
   }
 
+
+
   /* Card flip action */
 
   body { font-family: sans-serif; }
@@ -103,7 +142,6 @@ img {
 .scene {
   width: 200px;
   height: 260px;
-  border: 1px solid #CCC;
   margin: 40px 0;
   perspective: 600px;
 }
@@ -125,20 +163,24 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  line-height: 100px;
+  line-height: 0px;
   color: black;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
   backface-visibility: hidden;
+  border: 6px solid #fff;
 }
 
 .card__face--front {
-  background: red;
+  background: #3567b0;
+  border-radius: 50px;
 }
 
 .card__face--back {
-  background: blue;
+  background: #ffcb05;
+  border-radius: 50px;
+  border-color: #3567b0;
   transform: rotateY(180deg);
 }
 
@@ -146,9 +188,10 @@ img {
 button {
   width: 150px;
   height: 80px;
-  background-color: darkblue
+  background-color: #ffcb05;
   color: whitesmoke;
   font-size: 1.5rem;
   border-radius: 10px;
   margin: 100px;
+
 }
