@@ -1,197 +1,202 @@
 main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    grid-gap: 4rem;
-    width: 100%;
-    max-width: 1680px;
-    margin: 0 auto;
-    margin-bottom: 6rem;
-    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  
 }
 
 img {
-    max-width: 150px;
+  max-width: 150px;
 
 }
 
 *, *:before, *:after {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  color: #444;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 20px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  text-align: center;
+}
+header img {
+  max-width: 300px;
+  margin-bottom: 50px;
+}
+
+.buttoncenter {
+position: absolute;
+width: 100%;
+height: 100%;
+line-height: 100px;
+font-weight: bold;
+font-size: 20px;
+backface-visibility: hidden;
+}
+
+#search {
+  background: #ffcb05;
+  height: 260px;
+  width: 200px;
+  border-radius: 50px;
+  color: white;
+  border: 0;
+  margin: 0;
   
-  body {
-    margin: 40px;
-    font-family: 'Open Sans', 'sans-serif';
-    background-color: #fff;
-    color: #444;
-  }
-  
-  h1, p {
-    margin: 0 0 1em 0;
-  }
-  
-  .wrapper {
-    max-width: 1280px;
-    margin: 0 20px;
-    display: grid;
-    grid-gap: 10px;
+}
+
+
+@media screen and (min-width: 500px) {
+
+  /* no grid support? */
+  .sidebar {
+    float: left;
+    width: 19.1489%;
   }
 
-  header {
-    height: 200px;
+  .content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 100px;
-    text-align: center;
-  }
-  header img {
-    max-width: 300px;
-    margin-bottom: 50px;
+    width: 79.7872%;
   }
 
-  .buttoncenter {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 100px;
-  font-weight: bold;
-  font-size: 20px;
-  backface-visibility: hidden;
-  }
-
-  #search {
-    background: #ffcb05;
-    height: 260px;
-    width: 200px;
-    border-radius: 50px;
-    color: white;
-    border: 0;
-    margin: 0;
-    
-  }
-
-  
-  @media screen and (min-width: 500px) {
-  
-    /* no grid support? */
-    .sidebar {
-      float: left;
-      width: 19.1489%;
-    }
-  
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 79.7872%;
-    }
-
-    .content img {
-      height: 300px;
-      padding: 20px;
-    
-    }
-  
-    .wrapper {
-      margin: 0 auto;
-      grid-template-columns: 1fr 3fr;
-    }
-    
-    .header, .footer {
-      grid-column: 1 / -1;
-      /* needed for the floated layout */
-      clear: both;
-    }
-  
-  }
-  
-  .wrapper > * {
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
+  .content img {
+    height: 300px;
     padding: 20px;
-    font-size: 150%;
-    /* needed for the floated layout*/
-    margin-bottom: 10px;
+  
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
   }
   
-  /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
-  @supports (display: grid) {
-    .wrapper > * {
-      width: auto;
-      margin: 0;
-    }
+  .header, .footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
   }
 
-  ul {
-    list-style-type: none;
+}
+
+.wrapper > * {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
   }
-  
-  h5 {
-    text-align: center;
-  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+h5 {
+  text-align: center;
+}
 
 
 
-  /* Card flip action */
+/* Card flip action */
 
-  body { font-family: sans-serif; }
+body { font-family: sans-serif; }
 
 .scene {
-  width: 200px;
-  height: 260px;
-  margin: 40px 0;
-  perspective: 600px;
+width: 200px;
+height: 260px;
+margin: 40px 0;
+perspective: 600px;
 }
 
 .card {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
+width: 100%;
+height: 100%;
+transition: transform 1s;
+transform-style: preserve-3d;
+cursor: pointer;
+position: relative;
 }
 
 .card.is-flipped {
-  transform: rotateY(180deg);
+transform: rotateY(180deg);
 }
 
 .card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 0px;
-  color: black;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  backface-visibility: hidden;
-  border: 6px solid #fff;
+font-family: Arial, Helvetica, sans-serif;
+position: absolute;
+width: 100%;
+height: 100%;
+line-height: 0px;
+color: white;
+text-align: center;
+font-weight: bold;
+font-size: 20px;
+backface-visibility: hidden;
+border: 6px solid #fff;
 }
 
 .card__face--front {
-  background: #3567b0;
-  border-radius: 50px;
+background: #3567b0;
+border-radius: 50px;
 }
 
 .card__face--back {
-  background: #ffcb05;
-  border-radius: 50px;
-  border-color: #3567b0;
-  transform: rotateY(180deg);
+background: #ffcb05;
+border-radius: 50px;
+border-color: #3567b0;
+transform: rotateY(180deg);
 }
 
 
 button {
-  width: 150px;
-  height: 80px;
-  background-color: #ffcb05;
-  color: whitesmoke;
-  font-size: 1.5rem;
-  border-radius: 10px;
-  margin: 100px;
+width: 150px;
+height: 80px;
+background-color: #ffcb05;
+color: whitesmoke;
+font-size: 1.5rem;
+border-radius: 10px;
+margin: 100px;
 
+}
+
+.picDivs {
+padding: 20px;
 }
