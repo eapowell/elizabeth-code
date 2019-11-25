@@ -58,7 +58,7 @@ function getCharNumber(charURL) {
   console.log(femaleCharacters)
   const allDivs = Array.from(mainArea.querySelectorAll('div'))
 
- // buttons
+ 
   
   let maleButton = document.createElement('button')
   maleButton.textContent = "Male Characters"
