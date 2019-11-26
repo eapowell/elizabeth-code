@@ -161,7 +161,7 @@ let type = single_pokemon.types[0].type.name
 pokeCard.addEventListener("onmouseover", function() {
   this.setAttribute(
     "style",
-    `border: 3px solid ${color(type)}; border-radius: 7px`
+    `border: 1px solid ${color(type)}; border-radius: 7px`
   )
 })
 
