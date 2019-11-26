@@ -1,18 +1,13 @@
 
-// page header and nav
-
+// page header and home button
 let nav = document.querySelector("nav")
 let home = document.createElement("button")
 
 home.textContent = "HOME"
-
 nav.appendChild(home)
-
 home.addEventListener("click", () => {document.location.href="index.html"})
 
-// constructor
 // Constructor
-
 class pokeCharacter {
   constructor(id, name, forms, abilities, types) {
     this.id = id;
@@ -22,8 +17,6 @@ class pokeCharacter {
     this.types = types;
   }
 }
-
-
 
 // prompt window to input pokemon ID & create new card
 
@@ -41,7 +34,6 @@ document.querySelector("#search").addEventListener("click", () => {
       .catch(error => console.log(error))
   }
 });
-  
   
   // reusable asyne function to fetch data from url api
   async function getAPIData(url) {
@@ -63,7 +55,7 @@ document.querySelector("#search").addEventListener("click", () => {
       }
   });
   
-  //To capitalize the first letter in passed value
+//To capitalize the first letter in passed value
 const capitalize = s => {
   if (typeof s !== "string") return ""
   return s[0].toUpperCase() + s.slice(1);
@@ -78,7 +70,6 @@ const capitalize = s => {
   }
 
   // home.addEventListener("click", () => {document.location.href="index.html"})
-  
   let mainArea = document.querySelector("main")
   
   //Function to append card elements into main area
@@ -98,26 +89,17 @@ const capitalize = s => {
   
     pokeScene.setAttribute("class", "scene")
     pokeCard.setAttribute("class", "card")
-
-   
-
-   
-
-  pokeFront.setAttribute(
+    pokeFront.setAttribute(
     "class",
     `card__face card__face--front ${
       single_pokemon.types.filter(type => type.slot == 1)[0].type.name
     }`
   )
 
-  
-
   pokeBack.setAttribute("class", "card__face card__face--back")
   pic.setAttribute("class", "picDivs")
 
-
   // capitalize name
-
   let pokeNum = getPokeNumber(single_pokemon.id)
   pokeFront.appendChild(name)
   name.textContent = single_pokemon.name
@@ -126,8 +108,7 @@ const capitalize = s => {
   
   pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
   
-  // make the data show up
-  
+  // make the data show up 
   pokeFront.appendChild(pic)
   pokeFront.appendChild(name)
 
@@ -138,59 +119,89 @@ const capitalize = s => {
   mainArea.appendChild(pokeScene)
 
 
-  // adding mouseover card flip action
-  
+  // adding card flip action
   pokeCard.addEventListener("click", function() {
-  pokeCard.classList.toggle("is-flipped");
+  pokeCard.classList.toggle("is-flipped")
   })
   }
 
-  pokeCard.onmouseover = function() {
-    this.setAttribute(
-      "style", 'border: 5px solid ##ffcb05; border-radius: 7px'
-    )
-   }
-
-   pokeCard.onmouseleave = function() {
-    this.setAttribute("style", `border: none`)
-  };
-
-  
-
  //separate function to fill card back
-
- function fillCardBack(pokeBack, data) {
+  function fillCardBack(pokeBack, data) {
   pokeBack.setAttribute("class", "card__face card__face--back")
-  let pokeOrder = document.createElement("p")
+  let pokeOrder = document.createElement("h5")
   let pokeHP = document.createElement("h5")
-  let pokeAb = document.createElement("p")
+  let pokeAb = document.createElement("h5")
   let pokeAbilities = document.createElement("ul")
 
-  function fillCardBack(pokeBack, data) {
-    pokeBack.setAttribute("class", "card__face card__face--back")
-    let pokeOrder = document.createElement("p")
-    let pokeHP = document.createElement("h5")
-    let pokeAb = document.createElement("p")
-    let pokeAbilities = document.createElement("ul")
-  
-    //targeted types using map and then joined with a comma
-  
-    pokeOrder.textContent = `type: ${data.types
-      .map(t => t.type.name)
-      .join(", ")}`
-  
-    pokeHP.textContent = `HP: ${data.stats[5].base_stat}`
+  //targeted types using map 
+  pokeOrder.textContent = `Type: ${data.types
+    .map(t => t.type.name)}`
 
-    pokeBack.appendChild(pokeOrder)
-    pokeBack.appendChild(pokeHP)
-    pokeBack.appendChild(pokeAb)
-    pokeBack.appendChild(pokeAbilities)
-  }
-  
-  function getPokeNumber(id) {
-    if (id < 10) return `00${id}`
-    if (id > 9 && id < 100) {
-      return `0${id}`
-    } else return id
+  pokeHP.textContent = `HP: ${data.stats[5].base_stat}`
+  pokeAb.textContent = "Abilities:"
+
+  // target abilities
+  pokeAbilities.innerHTML = data.abilities
+    .map(a => a.ability.name)
+    .reduce(
+      (accumulator, currentValue) =>
+        (accumulator += `<li class="pokeability">${currentValue}</li>`),
+      ""
+    )
+
+  pokeBack.appendChild(pokeOrder)
+  pokeBack.appendChild(pokeHP)
+  pokeBack.appendChild(pokeAb)
+  pokeBack.appendChild(pokeAbilities)
+}
+
+//Set background color of card based on 'type'
+let type = single_pokemon.types[0].type.name
+
+pokeCard.addEventListener("onmouseover", function() {
+  this.setAttribute(
+    "style",
+    `border: 3px solid ${color(type)}; border-radius: 7px`
+  )
+})
+
+//trying to set up color changing border...not working yet
+function color(type) {
+  if (type === "fire") {
+    return "#f6b282"
+  } else if (type === "fairy") {
+    return "#f4c1cd"
+  } else if (type === "fighting") {
+    return "#f4c1cd"
+  } else if (type === "ghost") {
+    return "#a99ac1"
+  } else if (type === "grass") {
+    return "#aede96"
+  } else if (type === "ground") {
+    return "#ecd9a4"
+  } else if (type === "ice") {
+    return "#c1e7e7"
+  } else if (type === "normal") {
+    return "#cacaae"
+  } else if (type === "poison") {
+    return "#c68cc6"
+  } else if (type === "psychic") {
+    return "#fa9ab7"
+  } else if (type === "flying") {
+    return "#cabcf6"
+  } else if (type === "bug") {
+    return "#cad479"
+  } else if (type === "dark") {
+    return "#a99a91"
+  } else if (type === "dragon") {
+    return "#a987fa"
+  } else if (type === "electric") {
+    return "fae282" 
+  } else if (type === "rock") {
+    return "#d4c687"
+  } else if (type === "steel") {
+    return "#d4d4e2"
+  } else if (type === "water") {
+    return "#a4bcf6"
   }
 }
