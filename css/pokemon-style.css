@@ -3,6 +3,7 @@
   }
   
   body {
+    cursor: url("assets/PokeBall.ani");
     margin: 40px;
     font-family: 'Open Sans', 'sans-serif';
     background-color: #fff;
@@ -145,7 +146,6 @@
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
-  cursor: pointer;
   position: relative;
 }
 

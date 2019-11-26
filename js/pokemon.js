@@ -119,6 +119,7 @@ const capitalize = s => {
   mainArea.appendChild(pokeScene)
 
 
+
   // adding card flip action
   pokeCard.addEventListener("click", function() {
   pokeCard.classList.toggle("is-flipped")
@@ -157,13 +158,6 @@ const capitalize = s => {
 
 //Set background color of card based on 'type'
 let type = single_pokemon.types[0].type.name
-
-pokeCard.addEventListener("onmouseover", function() {
-  this.setAttribute(
-    "style",
-    `border: 1px solid ${color(type)}; border-radius: 7px`
-  )
-})
 
 //trying to set up color changing border...not working yet
 function color(type) {
@@ -205,3 +199,5 @@ function color(type) {
     return "#a4bcf6"
   }
 }
+
+
