@@ -85,6 +85,8 @@ button {
     border-radius: 10% / 50%;
     visibility: visible;
     margin: 20px;
+    background-color: #ebd939;
+    color: whitesmoke;
 }
 
 img {
@@ -93,7 +95,7 @@ img {
 
 div {
     display: flex;
-    flex-direction: column;
+    flex-direction:colrgb(241, 227, 28)55, 255, 255)
     align-items: center;
     border: 1px solid white;
     padding: 5px;
