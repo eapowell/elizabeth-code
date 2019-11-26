@@ -159,6 +159,15 @@ const capitalize = s => {
 //Set background color of card based on 'type'
 let type = single_pokemon.types[0].type.name
 
+pokeCard.addEventListener("onmouseover", function() {
+  "style",  `border: 1px solid ${color(type)}`
+})
+
+pokeCard.addEventListener("onmouseout", function() {
+  "style", 'border:none'
+})
+
+
 //trying to set up color changing border...not working yet
 function color(type) {
   if (type === "fire") {
@@ -199,5 +208,3 @@ function color(type) {
     return "#a4bcf6"
   }
 }
-
-
