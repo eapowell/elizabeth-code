@@ -156,17 +156,8 @@ const capitalize = s => {
   pokeBack.appendChild(pokeAbilities)
 }
 
-//Set background color of card based on 'type'
+//Set background color of card based on type
 let type = single_pokemon.types[0].type.name
-
-pokeCard.addEventListener("onmouseover", function() {
-  "style",  `border: 1px solid ${color(type)}`
-})
-
-pokeCard.addEventListener("onmouseout", function() {
-  "style", 'border:none'
-})
-
 
 //trying to set up color changing border...not working yet
 function color(type) {
@@ -208,3 +199,23 @@ function color(type) {
     return "#a4bcf6"
   }
 }
+
+pokeScene.addEventListener("onmouseover", function() {
+  "style",  `border: 1px solid ${color(type)}`
+})
+
+pokeScene.addEventListener("onmouseout", function() {
+  "style", 'border:none'
+})
+/*
+pokeCard.addEventListener("mouseover", mouseOver)
+pokeCard.addEventListener("mouseout", mouseOut)
+
+function mouseOver() {
+  pokeCard.style.color = "border: 1px solid ${color(type)";
+}
+
+function mouseOut() {
+  pokeCard.style.color = "black";
+}*/
+

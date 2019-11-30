@@ -142,7 +142,9 @@
   perspective: 600px;
   display: flex;
   justify-content: center;
+  border-color: #000000;
 }
+
 
 .card {
   width: 100%;
@@ -184,6 +186,13 @@
   padding: 20px;
 }
 
+.scene:hover {
+  border: 2px solid red;
+  border-radius: 40px;
+  padding: 1px;
+}
+
+
 button {
   width: 150px;
   height: 40px;
@@ -211,3 +220,4 @@ button:hover {
  margin: 0px auto 20px auto;
   
 }
+
