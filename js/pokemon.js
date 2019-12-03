@@ -20,7 +20,6 @@ class pokeCharacter {
 }
 
 // prompt window to input pokemon ID & create new card
-
 document.querySelector('#search').addEventListener('click', () => {
   let pokeId = prompt('Provide the Pokemon ID of the Pokemon you want to add:')
   let pokeIdNum = parseInt(pokeId, 10)
@@ -58,13 +57,13 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=25').then(
   },
 )
 
-//To capitalize the first letter in passed value
+// To capitalize the first letter in passed value
 const capitalize = s => {
   if (typeof s !== 'string') return ''
   return s[0].toUpperCase() + s.slice(1)
 }
 
-//get the correct pic for each card
+// get the correct pic for each card
 function getPokeNumber(id) {
   if (id < 10) return `00${id}`
   if (id > 9 && id < 100) {
@@ -72,10 +71,9 @@ function getPokeNumber(id) {
   } else return id
 }
 
-// home.addEventListener("click", () => {document.location.href="index.html"})
 let mainArea = document.querySelector('main')
 
-//Function to append card elements into main area
+// Function to append card elements into main area
 function populateDOM(single_pokemon) {
   let pokeScene = document.createElement('div')
   let pokeCard = document.createElement('div')
@@ -101,7 +99,7 @@ function populateDOM(single_pokemon) {
   pokeBack.setAttribute('class', 'card__face card__face--back')
   pic.setAttribute('class', 'picDivs')
 
-  // capitalize name
+// capitalize name
   let pokeNum = getPokeNumber(single_pokemon.id)
   pokeFront.appendChild(name)
   name.textContent = single_pokemon.name
@@ -110,7 +108,7 @@ function populateDOM(single_pokemon) {
 
   pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
 
-  // make the data show up
+// make the data show up
   pokeFront.appendChild(pic)
   pokeFront.appendChild(name)
 
@@ -120,23 +118,23 @@ function populateDOM(single_pokemon) {
 
   mainArea.appendChild(pokeScene)
 
+// add mouseover border to match type color
   pokeCard.addEventListener("mouseover", function() {
     let type = single_pokemon.types[0].type.name
     pokeCard.setAttribute("style", `border: 4px solid ${color(type)};`)
     "style",  `border: 1px solid ${color(type)}`
   })
-  
   pokeCard.addEventListener("mouseout", function() {
     pokeCard.setAttribute("style", "border: none;")
   })
 
-  // adding card flip action
+// adding card flip action
   pokeCard.addEventListener('click', function() {
     pokeCard.classList.toggle('is-flipped')
   })
 }
 
-//separate function to fill card back
+// separate function to fill card back
 function fillCardBack(pokeBack, data) {
   pokeBack.setAttribute('class', 'card__face card__face--back')
   let pokeOrder = document.createElement('h5')
@@ -144,13 +142,13 @@ function fillCardBack(pokeBack, data) {
   let pokeAb = document.createElement('h5')
   let pokeAbilities = document.createElement('ul')
 
-  //targeted types using map
+//targeted types using map
   pokeOrder.textContent = `Type: ${data.types.map(t => t.type.name)}`
 
   pokeHP.textContent = `HP: ${data.stats[5].base_stat}`
   pokeAb.textContent = 'Abilities:'
 
-  // target abilities
+// target abilities
   pokeAbilities.innerHTML = data.abilities
     .map(a => a.ability.name)
     .reduce(
@@ -165,10 +163,7 @@ function fillCardBack(pokeBack, data) {
   pokeBack.appendChild(pokeAbilities)
 }
 
-//Set background color of card based on type
-//let type = single_pokemon.types[0].type.name
-
-//trying to set up color changing border...not working yet
+// Set background color of card based on type
 function color(type) {
   if (type === 'fire') {
     return '#f6b282'
@@ -208,15 +203,3 @@ function color(type) {
     return '#a4bcf6'
   }
 }
-
-/*
-pokeCard.addEventListener("mouseover", mouseOver)
-pokeCard.addEventListener("mouseout", mouseOut)
-
-function mouseOver() {
-  pokeCard.style.color = "border: 1px solid ${color(type)";
-}
-
-function mouseOut() {
-  pokeCard.style.color = "black";
-}*/
