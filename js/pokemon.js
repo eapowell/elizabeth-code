@@ -136,12 +136,11 @@ function populateDOM(single_pokemon) {
     pokeCard.classList.toggle('is-flipped')
   })
 
-  // adding card flip action
+  // adding background color on back to match type - not working yet
   pokeCard.addEventListener('click', function() {
     let type = single_pokemon.types[0].type.name
     pokeBack.setAttribute("style", 'background: ${color(type)};')
   })
-  
   
 }
 
@@ -160,6 +159,12 @@ function fillCardBack(pokeBack, data) {
   pokeHP.textContent = `HP: ${data.stats[5].base_stat}`
   pokeAb.textContent = 'Abilities:'
 
+
+//pokeFront.appendChild(name)
+//name.textContent = single_pokemon.name
+
+//name.textContent = capitalize(`${single_pokemon.name}`)
+
   // target abilities
   pokeAbilities.innerHTML = data.abilities
     .map(a => a.ability.name)
@@ -173,6 +178,7 @@ function fillCardBack(pokeBack, data) {
   pokeBack.appendChild(pokeHP)
   pokeBack.appendChild(pokeAb)
   pokeBack.appendChild(pokeAbilities)
+
 }
 
 // Set background color of card based on type
