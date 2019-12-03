@@ -80,7 +80,7 @@ function populateDOM(single_pokemon) {
   let pokeFront = document.createElement('div')
   let pokeBack = document.createElement('div')
 
-  let name = document.createElement('p')
+  let name = document.createElement('h2')
   let pic = document.createElement('img')
 
   pic.setAttribute('class', 'picDivs')
@@ -99,6 +99,7 @@ function populateDOM(single_pokemon) {
   pokeBack.setAttribute('class', 'card__face card__face--back')
   pic.setAttribute('class', 'picDivs')
 
+
 // capitalize name
   let pokeNum = getPokeNumber(single_pokemon.id)
   pokeFront.appendChild(name)
@@ -107,6 +108,8 @@ function populateDOM(single_pokemon) {
   name.textContent = capitalize(`${single_pokemon.name}`)
 
   pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
+
+ 
 
 // make the data show up
   pokeFront.appendChild(pic)
@@ -132,6 +135,14 @@ function populateDOM(single_pokemon) {
   pokeCard.addEventListener('click', function() {
     pokeCard.classList.toggle('is-flipped')
   })
+
+  // adding card flip action
+  pokeCard.addEventListener('click', function() {
+    let type = single_pokemon.types[0].type.name
+    pokeBack.setAttribute("style", 'background: ${color(type)};')
+  })
+  
+  
 }
 
 // separate function to fill card back
@@ -141,6 +152,7 @@ function fillCardBack(pokeBack, data) {
   let pokeHP = document.createElement('h5')
   let pokeAb = document.createElement('h5')
   let pokeAbilities = document.createElement('ul')
+  
 
 //targeted types using map
   pokeOrder.textContent = `Type: ${data.types.map(t => t.type.name)}`

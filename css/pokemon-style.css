@@ -2,17 +2,37 @@
     box-sizing: border-box;
     
   }
+
+  @font-face {
+    font-family: Monk;
+    src: url(/assets/Pocket\ Monk.otf);
+  }
   
   body {
-    cursor: url("assets/PokeBall.ani");
-    margin: 40px;
-    font-family: 'Open Sans', 'sans-serif';
+    font-family: 'Roboto', monospace;
+    margin: 40px; 
     background-color: #59677e;
     color:whitesmoke;
   }
+
+
+h3 {
+  font-family: 'Roboto', monospace;
+  padding: 40px;
+}
+ 
+  h2 {
+    font-family: monk;
+    padding: 20px;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000;
+  }
   
   h1, p {
+    font-family: 'Roboto', monospace;
     margin: 0 0 1em 0;
+    size: 2em;
   }
   
   .wrapper {
@@ -121,11 +141,20 @@
   }
 
   ul {
-    list-style-type: none;
+    font-family: 'Roboto', monospace;
+    display: inline-block;
+    list-style-image: url('/assets/pokeball.png');
+    padding: 0px;
+    margin: 0px;
+  }
+
+  li {
+    font-family: inherit;
   }
   
   h5 {
-
+    font-family: 'Roboto', monospace;
+    font-size: 18px;
     text-align: justify;
     margin-right: auto;
     margin-left: auto;
@@ -179,7 +208,7 @@
 }
 
 .card__face--back {
-  background: #d20200;
+  
   border-radius: 40px;
   border-color: #000;
   transform: rotateY(180deg);
