@@ -121,11 +121,11 @@ function populateDOM(single_pokemon) {
 // add mouseover border to match type color
   pokeCard.addEventListener("mouseover", function() {
     let type = single_pokemon.types[0].type.name
-    pokeCard.setAttribute("style", `border: 4px solid ${color(type)};`)
-    "style",  `border: 1px solid ${color(type)}`
+    pokeCard.setAttribute("style", `box-shadow: 0px 2px 20px 10px ${color(type)}; border-radius: 40px;`)
+    
   })
   pokeCard.addEventListener("mouseout", function() {
-    pokeCard.setAttribute("style", "border: none;")
+    pokeCard.setAttribute("style", "box-shadow: none;")
   })
 
 // adding card flip action
@@ -148,7 +148,7 @@ function fillCardBack(pokeBack, data) {
   pokeHP.textContent = `HP: ${data.stats[5].base_stat}`
   pokeAb.textContent = 'Abilities:'
 
-// target abilities
+  // target abilities
   pokeAbilities.innerHTML = data.abilities
     .map(a => a.ability.name)
     .reduce(
