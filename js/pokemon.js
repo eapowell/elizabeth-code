@@ -163,7 +163,7 @@ function fillCardBack(pokeBack, data) {
 //pokeFront.appendChild(name)
 //name.textContent = single_pokemon.name
 
-//name.textContent = capitalize(`${a.ability.name}`)
+
 
   // target abilities
   pokeAbilities.innerHTML = data.abilities
@@ -178,6 +178,8 @@ function fillCardBack(pokeBack, data) {
   pokeBack.appendChild(pokeHP)
   pokeBack.appendChild(pokeAb)
   pokeBack.appendChild(pokeAbilities)
+
+  //name.textContent = capitalize(`${a.ability.name}`)
 
 }
 
