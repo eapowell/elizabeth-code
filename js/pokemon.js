@@ -141,6 +141,7 @@ function populateDOM(single_pokemon) {
     let type = single_pokemon.types[0].type.name
     pokeBack.setAttribute("style", 'background: ${color(type)};')
   })
+  
 }
 
 // separate function to fill card back
@@ -156,7 +157,13 @@ function fillCardBack(pokeBack, data) {
   pokeOrder.textContent = `Type: ${data.types.map(t => t.type.name)}`
 
   pokeHP.textContent = `HP: ${data.stats[5].base_stat}`
-  pokeAb.textContent = 'Abilities:'
+  pokeAb.textContent = 'Abilities: '
+
+
+//pokeFront.appendChild(name)
+//name.textContent = single_pokemon.name
+
+//name.textContent = capitalize(`${a.ability.name}`)
 
   // target abilities
   pokeAbilities.innerHTML = data.abilities

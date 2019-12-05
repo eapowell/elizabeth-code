@@ -9,7 +9,7 @@
   }
   
   body {
-    font-family: 'Roboto', monospace;
+    font-family: 'Roboto', monospace, sans-serif;
     margin: 40px; 
     background-color: #59677e;
     color:whitesmoke;
@@ -18,7 +18,8 @@
 
 h3 {
   font-family: 'Roboto', monospace;
-  padding: 40px;
+  padding: 20px;
+  font-weight: 700;
 }
  
   h2 {
@@ -95,9 +96,13 @@ h3 {
     color: white;
     border: 1px solid black;
     margin: 0;
-    
   }
 
+  #search h3 {
+    font-family: monk;
+    font-size: 1.7em;
+    text-shadow: 1px 1px 2px #000;
+  }
   
   @media screen and (min-width: 500px) {
   
