@@ -125,6 +125,7 @@ navbar li {
   div img {
     border-radius: 50%;
     border: 3px solid gray;
+    padding: 0px;
   }
 
 
