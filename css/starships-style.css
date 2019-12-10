@@ -226,6 +226,7 @@ h2 p {
 li {
   padding: 10px;
   background-color: grey;
+  text-decoration: none;
 }
 li:hover {
   background-color: white;
