@@ -2,10 +2,11 @@
 
 
 
-Here are some of the skills I've learned:
-
-## [Basic HTML,](https://github.com/eapowell/elizabeth-code/blob/master/pokemon.html) [CSS and Flexbox](https://github.com/eapowell/elizabeth-code/blob/master/css/style.css)
+Here are some of the skills I've learned and have displayed on my 
 [Personal Portfolio Page - Netlify](https://elizabethportfolioupgrade.netlify.com)
+
+
+### [Basic HTML,](https://github.com/eapowell/elizabeth-code/blob/master/pokemon.html) [CSS and Flexbox](https://github.com/eapowell/elizabeth-code/blob/master/css/style.css)
 
 ### Basic JavaScript:
 * Proper use of variables with proper scope
