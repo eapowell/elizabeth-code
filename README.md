@@ -9,17 +9,17 @@ Here are some of the skills I've learned and have displayed on my
 ### [Basic HTML,](https://github.com/eapowell/elizabeth-code/blob/master/pokemon.html) [CSS and Flexbox](https://github.com/eapowell/elizabeth-code/blob/master/css/style.css)
 
 ### Basic JavaScript:
-* Proper use of variables with proper scope
-* Good use of conditional logic and value comparison
-* roper use of String manipulation
-* Good use of Arrays
-* Use of custom JavaScript objects
+* Variables with proper scope
+* Conditional logic and value comparison
+* String manipulation
+* Arrays
+* Custom JavaScript objects
 
 ### ES6:
 * Proper use of [let and const](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) variables 
 * [Use of Arrow functions](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
-* Use of Strings using Template Literals
-* Proper declarations of Objects
+* Strings using Template Literals
+* Declarations of Objects
 * Use of [Import and Export statements](https://github.com/eapowell/elizabeth-code/blob/master/js/starwars.js)
 
 ### Basic Data Structures:
