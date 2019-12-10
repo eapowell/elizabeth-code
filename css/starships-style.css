@@ -122,6 +122,9 @@ navbar li {
     text-align: center;
   }
 
+  img {
+    border-radius: 40%;;
+  }
 
 
   header {
