@@ -4,7 +4,6 @@ import { people } from '../assets/people.js'
 
 let mainArea = document.querySelector('main')
 let mainHeader = document.querySelector ('header')
-let mainSidebar = document.querySelector('aside')
 
   people.forEach(function(person) {
     let personDiv = document.createElement('div')
