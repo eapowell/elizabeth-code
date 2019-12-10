@@ -165,7 +165,7 @@ function fillCardBack(pokeBack, data) {
 
 
 
-  // target abilities
+  // target abilities with dot notation
   pokeAbilities.innerHTML = data.abilities
     .map(a => a.ability.name)
     .reduce(

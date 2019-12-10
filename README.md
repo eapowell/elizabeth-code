@@ -16,20 +16,20 @@ Here are some of the skills I've learned and have displayed on my
 * Use of custom JavaScript objects
 
 ### ES6:
-* Proper use of let and const variables 
+* Proper use of [let and const](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) variables 
 * [Use of Arrow functions](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
 * Use of Strings using Template Literals
 * Proper declarations of Objects
-* Use of Import and Export statements
+* Use of [Import and Export statements](https://github.com/eapowell/elizabeth-code/blob/master/js/starwars.js)
 
 ### Basic Data Structures:
 * Using Arrays to store and manipulate collections of data
-* Use of Objects with key-value pairs
-* Iteration through an Array using loops and Array methods
+* Use of Objects with [key-value pairs](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
+* Iteration through an Array [using loops](https://github.com/eapowell/elizabeth-code/blob/master/js/starships.js) and Array methods
 
 ### Object Oriented Programming:
-* Objects with properties and methods accessed using dot notation
-* Objects using Constructors properly
+* Objects with properties and methods accessed using [dot notation](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
+* Objects using [Constructors](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) properly
 
 #### Website is visually pleasing and easy to navigate and serves as a good example of learner's capability
 #### Website runs without errors
