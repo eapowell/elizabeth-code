@@ -10,7 +10,7 @@ Here are some of the skills I've learned and have displayed on my
 
 ### Basic JavaScript:
 * Variables with proper scope
-* Conditional logic and value comparison
+* [Conditional logic](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) and value comparison
 * String manipulation
 * Arrays
 * Custom JavaScript objects
@@ -23,7 +23,7 @@ Here are some of the skills I've learned and have displayed on my
 * Use of [Import and Export statements](https://github.com/eapowell/elizabeth-code/blob/master/js/starwars.js)
 
 ### Basic Data Structures:
-* Using Arrays to store and manipulate collections of data
+* Using Arrays to [store and manipulate collections of data with map](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
 * Use of Objects with [key-value pairs](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
 * Iteration through an Array [using loops](https://github.com/eapowell/elizabeth-code/blob/master/js/starships.js) and Array methods
 

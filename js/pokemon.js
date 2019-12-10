@@ -19,7 +19,7 @@ class pokeCharacter {
   }
 }
 
-// prompt window to input pokemon ID & create new card
+// prompt window to input pokemon ID & create new card with conditional logic & let
 document.querySelector('#search').addEventListener('click', () => {
   let pokeId = prompt('Provide the Pokemon ID of the Pokemon you want to add:')
   let pokeIdNum = parseInt(pokeId, 10)
@@ -57,13 +57,13 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=25').then(
   },
 )
 
-// To capitalize the first letter in passed value
+// To capitalize the first letter in passed value using const, 
 const capitalize = s => {
   if (typeof s !== 'string') return ''
   return s[0].toUpperCase() + s.slice(1)
 }
 
-// get the correct pic for each card
+// get the correct pic for each card using logic
 function getPokeNumber(id) {
   if (id < 10) return `00${id}`
   if (id > 9 && id < 100) {
@@ -73,7 +73,7 @@ function getPokeNumber(id) {
 
 let mainArea = document.querySelector('main')
 
-// Function to append card elements into main area
+// Function to append card elements into main area & manipulate data
 function populateDOM(single_pokemon) {
   let pokeScene = document.createElement('div')
   let pokeCard = document.createElement('div')
