@@ -115,6 +115,7 @@ navbar li {
 
   ul {
     list-style-type: none;
+    text-decoration: none;
   }
   
   h5 {
@@ -141,15 +142,6 @@ header h1 {
     list-style: none;
     justify-content: space-around;
     width: 320px;
-}
-
-navbar a {
-    color: white;
-    text-decoration: none;
-}
-
-navbar a:hover {
-    color: #fded11;
 }
 
 navbar {
