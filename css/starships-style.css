@@ -223,3 +223,12 @@ h2 p {
     margin: 0;
 }
 
+li {
+  padding: 10px;
+  background-color: grey;
+}
+li:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
