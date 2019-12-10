@@ -230,3 +230,7 @@ li:hover {
   text-decoration: none;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+  text-align: center;
+}
