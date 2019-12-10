@@ -230,7 +230,12 @@ li:hover {
   text-decoration: none;
 }
 
+a {
+  color: whitesmoke;
+}
+
 a:-webkit-any-link {
   text-decoration: none;
   text-align: center;
+  color: white;
 }
