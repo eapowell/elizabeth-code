@@ -1,38 +1,24 @@
 import { people } from '../assets/people.js'
 
-console.log ('Hey, I am JavaScript on your page')
 
-/*
-films.forEach(function(film) {
-
-    let filmDiv = document.createElement('div')
-    let title = document.createElement('h1')
-    let crawl = document.createElement('p')
-
-    filmDiv.appendChild(title)
-    filmDiv.appendChild(crawl)
-
-    title.textContent = film.title
-    crawl.innerText = film.opening_crawl
-
-    mainArea.appendChild(filmDiv)
-  })
-*/
 
 let mainArea = document.querySelector('main')
 let mainHeader = document.querySelector ('header')
+let mainSidebar = document.querySelector('aside')
 
   people.forEach(function(person) {
     let personDiv = document.createElement('div')
-    let name = document.createElement('h2')
-    let gender = document.createElement('h4')
+    let name = document.createElement('h4')
+    let gender = document.createElement('p')
     let pic = document.createElement('img')
 
     personDiv.appendChild(name)
-    personDiv.appendChild(gender)
     personDiv.appendChild(pic)
+    personDiv.appendChild(gender)
 
     let charNum = getCharNumber(person.url)
+    pic.setAttribute('class', 'pic')
+    personDiv.setAttribute('class', 'card')
     
     name.textContent = person.name
     gender.textContent = person.gender

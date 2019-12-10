@@ -31,5 +31,5 @@ Here are some of the skills I've learned and have displayed on my
 * Objects with properties and methods accessed using dot notation
 * Objects using Constructors properly
 
-### Website is visually pleasing and easy to navigate and serves as a good example of learner's capability
-### Website runs without errors
+#### Website is visually pleasing and easy to navigate and serves as a good example of learner's capability
+#### Website runs without errors

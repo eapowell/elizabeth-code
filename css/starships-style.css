@@ -5,13 +5,54 @@
   body {
     margin: 30px;
     font-family: 'Open Sans', 'sans-serif';
-    background-color: #444;
+    background-image: url(https://wallpapercave.com/wp/9oPM25h.jpg);
+    background-position: right; 
+    height: 1100px;
+  background-repeat: repeat-y; 
+  background-size: cover;
     color: whitesmoke;
   }
-  
-  h1, p {
-    margin: 0 0 1em 0;
+  header {
+    display: flex;
+    align-content: center;
   }
+
+header img {
+    max-height: 150px;
+}
+
+header h1 {
+    font-size: 6rem;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 320px;
+}
+
+navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+navbar a:hover {
+    color: #fded11;
+}
+
+navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%; 
+    height: 100px;
+    align-items: center;
+}
+
+navbar li {
+    font-size: 1 rem;
+}
   
   .wrapper {
     max-width: 1280px;
@@ -79,3 +120,106 @@
   h5 {
     text-align: center;
   }
+
+
+
+  header {
+    display: flex;
+    align-content: center;
+  }
+
+header img {
+    max-height: 150px;
+}
+
+header h1 {
+    font-size: 6rem;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 320px;
+}
+
+navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+navbar a:hover {
+    color: #fded11;
+}
+
+navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%; 
+    height: 100px;
+    align-items: center;
+}
+
+navbar li {
+    font-size: 1 rem;
+}
+
+
+main {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: 10%;
+  margin-bottom: 3em;
+  z-index: 10;
+}
+
+.card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+
+button {
+    height: 50%;
+    padding: 2px;
+    font-size: 1.5rem;
+    border-radius: 20%;
+    visibility: visible;
+    margin: 80px 20px 80px 40px;
+    background-color: #ebd939;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 50px #ebd939;
+}
+
+img {
+    max-width: 300px;
+}
+
+main div {
+    display: flex;
+    border: 1px solid white;
+    padding: 3px;
+}
+
+main div:hover {
+  box-shadow: 0px 0px 50px whitesmoke;
+}
+
+h2 p {
+    margin: 0;
+}
+
