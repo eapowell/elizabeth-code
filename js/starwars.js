@@ -5,6 +5,7 @@ import { people } from '../assets/people.js'
 let mainArea = document.querySelector('main')
 let mainHeader = document.querySelector ('header')
 
+
   people.forEach(function(person) {
     let personDiv = document.createElement('div')
     let name = document.createElement('h4')
