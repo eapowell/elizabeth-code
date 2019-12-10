@@ -4,7 +4,7 @@
 
 Here are some of the skills I've learned:
 
-## Basic HTML, CSS and Flexbox
+## [Basic HTML,](https://github.com/eapowell/elizabeth-code/blob/master/pokemon.html) [CSS and Flexbox](https://github.com/eapowell/elizabeth-code/blob/master/css/style.css)
 [Personal Portfolio Page - Netlify](https://elizabethportfolioupgrade.netlify.com)
 
 ### Basic JavaScript:
@@ -16,7 +16,6 @@ Here are some of the skills I've learned:
 
 ### ES6:
 * Proper use of let and const variables 
-* Use of Arrow functions
 * [Use of Arrow functions](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
 * Use of Strings using Template Literals
 * Proper declarations of Objects
