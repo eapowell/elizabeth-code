@@ -35,8 +35,9 @@ document.querySelector('#search').addEventListener('click', () => {
   }
 })
 
-const lizziemon = new Pokemon( 800, "Lizziemon", [{ name: "yoga" }], 6, 250, 
-(abilities = [{ ability: { name: "read" } }]), [{ type: { name: "water" } }]);
+
+// const lizziemon = new Pokemon( 800, "Lizziemon", [{ name: "yoga" }], 6, 250, 
+// (abilities = [{ ability: { name: "read" } }]), [{ type: { name: "water" } }]);
 
 // reusable asyne function to fetch data from url api
 async function getAPIData(url) {
