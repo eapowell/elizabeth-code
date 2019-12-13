@@ -31,3 +31,4 @@ function getCharNumber(charURL) {
     
     }
   }
+)
