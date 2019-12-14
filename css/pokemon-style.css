@@ -211,6 +211,7 @@ h3 {
   background: #8699b6;
   border-color:#000;
   border-radius: 40px;
+  text-align: center;
 }
 
 .card__face--back {
