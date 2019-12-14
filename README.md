@@ -11,14 +11,14 @@ Here are some of the skills I've learned and have displayed on my
 ### Basic JavaScript:
 * Variables with proper scope
 * [Conditional logic](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) and value comparison
-* String manipulation
+* [String manipulation](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) Line 68
 * Arrays
-* Custom JavaScript objects
+* [Custom JavaScript objects](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) Line 24
 
 ### ES6:
 * Proper use of [let and const](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) variables 
 * [Use of Arrow functions](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
-* Strings using Template Literals
+* [Strings using Template Literals](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) Line 113
 * Declarations of Objects
 * Use of [Import and Export statements](https://github.com/eapowell/elizabeth-code/blob/master/js/starwars.js)
 
