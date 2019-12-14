@@ -12,7 +12,7 @@ Here are some of the skills I've learned and have displayed on my
 * Variables with proper scope
 * [Conditional logic](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) and value comparison
 * [String manipulation](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) Line 68
-* Arrays
+* [Arrays](https://github.com/eapowell/elizabeth-code/blob/master/js/senators.js)
 * [Custom JavaScript objects](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) Line 24
 
 ### ES6:
