@@ -53,6 +53,7 @@ navbar {
 navbar li {
     font-size: 1 rem;
 }
+
   
   .wrapper {
     max-width: 1280px;
@@ -79,7 +80,7 @@ navbar li {
 
     .content img {
       height: 200px;
-      padding: 20px;
+      padding: 0px;
     }
   
     .wrapper {
@@ -124,7 +125,7 @@ navbar li {
 
   div img {
     border-radius: 50%;
-    border: 3px solid gray;
+    border: 10px solid rgba(245, 245, 245, 0.144);
     padding: 0px;
   }
 
@@ -135,7 +136,7 @@ navbar li {
   }
 
 header img {
-    max-height: 150px;
+    max-height: 180px;
 }
 
 header h1 {
@@ -226,16 +227,16 @@ li {
   text-decoration: none;
 }
 li:hover {
+  color: black;
   background-color: white;
   text-decoration: none;
-}
-
-a:hover {
-  color: black;
 }
 
 a:-webkit-any-link {
   text-decoration: none;
   text-align: center;
   color: white;
+}
+a:-webkit-any-link:hover {
+  color: black;
 }
