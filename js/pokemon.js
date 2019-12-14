@@ -21,7 +21,7 @@ class pokeCharacter {
 
 
 // New Card
-const Lizziemon = new Pokemon(900, "Lizziemon", 130);
+//const Lizziemon = new Pokemon(900, "Lizziemon", 130);
 
 // prompt window to input pokemon ID & create new card with conditional logic & let
 document.querySelector('#search').addEventListener('click', () => {
