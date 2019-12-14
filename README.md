@@ -31,5 +31,4 @@ Here are some of the skills I've learned and have displayed on my
 * Objects with properties and methods accessed using [dot notation](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js)
 * Objects using [Constructors](https://github.com/eapowell/elizabeth-code/blob/master/js/pokemon.js) properly
 
-#### Website is visually pleasing and easy to navigate and serves as a good example of learner's capability
-#### Website runs without errors
+
